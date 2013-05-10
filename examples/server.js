@@ -1,4 +1,4 @@
-var njs = require('nightmareServer').nightmare('test');
+var njs = require('nightmare').nightmare('test');
 
 njs.notifyCasperMessage = function(msg) {
     if(msg.type == 'statement') {
