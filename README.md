@@ -1,18 +1,16 @@
 #NightmareJS
-===========
 
-NightmareJS is a means to connect CasperJS with Node. There is no need to rewrite existing CasperJS code.
-Instead it just passes data over a socket.io connection between the casper object and the node server, allowing you
-to query specific data or execute specific functions that node offers but are unavailable in the web browser.
+NightmareJS is a means to connect CasperJS with NodeJS. There is no need to rewrite existing CasperJS code.
+Instead, it passes data over a socket.io connection between the Casper object and the Node server, allowing you
+to query specific data or execute specific functions that node offers but are unavailable in the web browser that Casper
+operates through.
 
 ##Install
----------
 ```bash
 > npm install nightmarejs
 ```
 
 ##Usage
--------
 You'll first need to create a javascript file to control and listen to the nightmare components.
 To initialize the class, use:
 ```javascript
@@ -54,5 +52,4 @@ casper.waitForMessageResponse(msgForParent, dataFilter, then, timeout, onTimeout
 For a more complete example set, please look in the example folder.
 
 ##License
----------
 MIT Licensed
