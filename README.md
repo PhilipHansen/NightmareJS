@@ -20,11 +20,11 @@ NightmareJS is available through NPM.
 You'll first need to create a javascript file to control and listen to the nightmare components.
 To initialize the class, use:
 ```javascript
-var nightmareJS = require('nightmareServer').nightmare();
+var nightmareJS = require('nightmarejs').nightmare();
 ```
 If you plan to use this for testing, pass in the parameter 'test' to the object during creation, like:
 ```javascript
-var nightmareJS = require('nightmareServer').nightmare('test');
+var nightmareJS = require('nightmarejs').nightmare('test');
 ```
 
 Once the object has been created, you'll need to implement a function called 'notifyCasperMessage'. This is the function that

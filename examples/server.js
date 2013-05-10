@@ -1,5 +1,5 @@
 try {
-    var nightmareJS = require('nightmare').nightmare('test');
+    var nightmareJS = require('nightmarejs').nightmare('test');
 } catch(e) {
     var nightmareJS = require('../lib/nightmare').nightmare('test');
 }
