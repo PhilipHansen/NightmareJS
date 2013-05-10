@@ -1,6 +1,10 @@
-var njs = require('nightmare').nightmare('test');
+try {
+    var nightmareJS = require('nightmare').nightmare('test');
+} catch(e) {
+    var nightmareJS = require('../lib/nightmare').nightmare('test');
+}
 
-njs.notifyCasperMessage = function(msg) {
+nightmareJS.notifyCasperMessage = function(msg) {
     if(msg.type == 'statement') {
         console.log(msg.msg);
         console.log("Nightmare Server says hello.");
@@ -8,6 +12,6 @@ njs.notifyCasperMessage = function(msg) {
     else if(msg.type == 'dateQuestion') {
         console.log(msg.msg);
         var d = new Date();
-        njs.sendCasperMessage({ time: d.toString(), timeNow: d.getTime()});
+        nightmareJS.sendCasperMessage({ time: d.toString(), timeNow: d.getTime()});
     }
 }

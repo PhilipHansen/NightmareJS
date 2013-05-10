@@ -6,6 +6,12 @@ to query specific data or execute specific functions that node offers but are un
 operates through.
 
 ##Install
+###Prerequisites
+* [Node.js](http://nodejs.org) >= 0.6
+* [PhantomJS](http://phantomjs.org) >= 1.7
+* [CasperJS](http://casperjs.org) >= 1.0
+
+NightmareJS is available through NPM.
 ```bash
 > npm install nightmarejs
 ```
