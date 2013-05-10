@@ -41,15 +41,26 @@ On the Casper side, to send a message to the server, call the function:
 ```javascript
 /**
 	msgForParent	= Object to be sent to the Node server.
-	dataFilter 		= Term that is expected to be included in response from the Node server.
+	expectedTerm 		= Term that is expected to be included in response from the Node server.
 	then			= Function with the next step for casper to execute. (Optional)
 	timeout			= Millisecond timeout value. If not included, specified default is used instead. (Optional)
 	onTimeout		= Function to be executed on timeout. (Optional)
 */
-casper.waitForMessageResponse(msgForParent, dataFilter, then, timeout, onTimeout);
+casper.waitForMessageResponse(msgForParent, expectedTerm, then, timeout, onTimeout);
 ```
 
+Once it is all together, you can run it like:
+```bash
+> node examples/server.js --log-level=debug --direct examples/casper.js
+```
 For a more complete example set, please look in the example folder.
+
+##Command Line Options
+When running a Nightmare test, you can pass in any of the command line options that CasperJS takes provided that they
+come after your server file. Example form:
+```bash
+> node server_filename.js [command line options] casper_filenames.js
+```
 
 ##License
 MIT Licensed
