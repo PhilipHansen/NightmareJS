@@ -4,7 +4,7 @@ try {
     var nightmareJS = require('../lib/nightmare').nightmare('test');
 }
 
-nightmareJS.notifyCasperMessage = function(msg) {
+nightmareJS.notifyCasperMessage = msg => {
     if(msg.type == 'statement') {
         console.log(msg.msg);
         console.log("Nightmare Server says hello.");
